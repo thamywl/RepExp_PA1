@@ -149,6 +149,10 @@ The 5-minute interval that has the maximum number of steps averaged across all t
 
 
 ### 4) Imputing missing values
+Investigation suggest that the the measurements are taken at 288 intervals of 5 minutes everyday. The missing data does not come from sub intervals within a day, but come from a full 288 intervals of 8 separate days. This means that a total of 2304 missing data coming from 8 separate days of measurements at 288 intervals of 5 minutes. Given this information, we can safely conduct the following:
+1) Obtain the average steps per day per interval given the known data. 
+2) Replace all missing data with the known average steps per day per interval. 
+3) Save table with the updated data. 
 
 ```r
 ## Checking the number of rows that have NA data and where they are located
